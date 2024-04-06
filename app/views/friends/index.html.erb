@@ -1,0 +1,34 @@
+<h1>Friends List</h1>
+
+
+<%= link_to "New friend ➕", new_friend_path, class:"btn btn-light mb-5" %>
+<div id="friends">
+  <table class="table table-striped table-bordered table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Firt Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">E-mail</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Twitter</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @friends.each do |friend| %>
+      <tr>
+        <td><%= friend.first_name %></td>
+        <td><%= friend.last_name %></td>
+        <td><%= friend.email %></td>
+        <td><%= friend.phone %></td>
+        <td><%= friend.twitter %></td>
+        <td>
+          <%= link_to "Show 👀", friend, class:"btn btn-light" %>
+          <%= link_to "Edit ✏️", edit_friend_path(friend), class:"btn btn-light" %>
+        </td>
+      </tr>
+    <% end %>
+    
+  </tbody>
+</table>
+

@@ -12,30 +12,33 @@
   <% end %>
 
   <div class="mb-3">
-    <%= form.label :first_name, class:"form-label", for:"firstnamefield" %>
-    <%= form.text_field :first_name, class:"form-control", id:"firstnamefield", placeholder:"Jane" %>
+    <%= form.label :first_name, class:"form-label" %>
+    <%= form.text_field :first_name, class:"form-control", placeholder:"Jane" %>
   </div>
 
   <div class="mb-3">
-    <%= form.label :last_name, style: "display: block", class:"form-label", for:"lastnamefield" %>
-    <%= form.text_field :last_name, class:"form-control", id:"lastnamefield", placeholder:"Doe" %>
+    <%= form.label :last_name, style: "display: block", class:"form-label" %>
+    <%= form.text_field :last_name, class:"form-control", placeholder:"Doe" %>
   </div>
 
   <div class="mb-3">
-    <%= form.label :email, style: "display: block",  class:"form-label", for:"emailfield" %>
-    <%= form.text_field :email, class:"form-control", id:"emailfield", placeholder:"name@example.com" %>
+    <%= form.label :email, style: "display: block",  class:"form-label" %>
+    <%= form.text_field :email, class:"form-control", placeholder:"name@example.com" %>
   </div>
 
   <div class="mb-3">
-    <%= form.label :phone, style: "display: block",  class:"form-label", for:"phonefield" %>
-    <%= form.text_field :phone, class:"form-control", id:"phonefield", placeholder:"333232332" %>
+    <%= form.label :phone, style: "display: block",  class:"form-label" %>
+    <%= form.text_field :phone, class:"form-control", placeholder:"333232332" %>
   </div>
 
   <div class="mb-3">
-    <%= form.label :twitter, style: "display: block",  class:"form-label", for:"twitterfield" %>
-    <%= form.text_field :twitter, class:"form-control", id:"twitterfield", placeholder:"@bitchwow" %>
+    <%= form.label :twitter, style: "display: block",  class:"form-label" %>
+    <%= form.text_field :twitter, class:"form-control", placeholder:"@bitchwow" %>
   </div>
 
+  <div class="mb-3">
+    <%= form.number_field :user_id, class:"form-control", placeholder:"User Id", value:current_user.id, id: :friend_user_id, type: :hidden %>
+  </div>
   <div class="mb-3">
     <%= form.submit class:"btn btn-secondary"%>
   </div>

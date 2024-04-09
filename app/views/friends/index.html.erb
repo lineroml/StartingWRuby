@@ -11,6 +11,7 @@
       <th scope="col">E-mail</th>
       <th scope="col">Phone</th>
       <th scope="col">Twitter</th>
+      <th scope="col">User Id</th>
       <th scope="col">Actions</th>
     </tr>
   </thead>
@@ -22,9 +23,11 @@
         <td><%= friend.email %></td>
         <td><%= friend.phone %></td>
         <td><%= friend.twitter %></td>
+        <td><%= friend.user_id %></td>
         <td>
           <%= link_to "Show 👀", friend, class:"btn btn-light" %>
           <%= link_to "Edit ✏️", edit_friend_path(friend), class:"btn btn-light" %>
+          <%= link_to 'Delete 🗑️', friend, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
         </td>
       </tr>
     <% end %>
